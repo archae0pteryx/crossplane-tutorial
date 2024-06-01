@@ -124,5 +124,9 @@ helm upgrade --install argocd argo-cd \
 
 kubectl apply --filename argocd/apps.yaml
 
+#############
+# Providers #
+#############
+
 kubectl apply -f providers/10-google-vm.yaml
 kubectl apply -f providers/20-google-config.yaml
