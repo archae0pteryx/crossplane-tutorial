@@ -2,16 +2,16 @@
 apiVersion: compute.gcp.upbound.io/v1beta1
 kind: Instance
 metadata:
-  name: sandbox-crossplane-vm
+  name: my-vm
 spec:
   forProvider:
     bootDisk:
       - initializeParams:
           - image: debian-cloud/debian-11
-    machineType: f1-micro
+    machineType: g1-small
     networkInterface:
       - networkRef:
-          name: sandbox-crossplane-vpc
+          name: dot-network
     zone: us-east1-b
     desiredStatus: RUNNING
     allowStoppingForUpdate: true
@@ -19,6 +19,6 @@ spec:
 apiVersion: compute.gcp.upbound.io/v1beta1
 kind: Network
 metadata:
-  name: sandbox-crossplane-vpc
+  name: dot-network
 spec:
   forProvider: {}

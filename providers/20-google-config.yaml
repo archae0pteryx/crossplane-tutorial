@@ -1,0 +1,14 @@
+# kubectl --namespace crossplane-system create secret generic gcp-creds --from-file creds=./gcp-creds.json
+---
+apiVersion: gcp.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: default
+spec:
+  projectID: ai-worker-cluster
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: gcp-creds
+      key: creds

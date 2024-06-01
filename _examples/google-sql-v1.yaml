@@ -7,7 +7,7 @@ metadata:
 data:
   password: cG9zdGdyZXM=
 ---
-apiVersion: eyepop.ai/v1alpha1
+apiVersion: devopstoolkitseries.com/v1alpha1
 kind: SQL
 metadata:
   name: my-db
